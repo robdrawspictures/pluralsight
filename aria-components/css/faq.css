@@ -1,0 +1,30 @@
+.question {
+  border-bottom: 2px solid;
+  cursor: pointer;
+  padding-bottom: 1rem;
+  padding-left: 3rem;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+
+.question::before {
+  border-style: solid;
+  border-width: 0.25rem 0.25rem 0 0;
+  content: '';
+  display: inline-block;
+  height: 2rem;
+  left: 0.15rem;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transform: rotate(135deg);
+  width: 2rem;
+}
+
+.question[aria-expanded="true"]::before {
+  top: 28%;
+  transform: rotate(-45deg);
+}
+
+

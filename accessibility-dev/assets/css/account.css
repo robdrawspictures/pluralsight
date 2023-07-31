@@ -1,0 +1,442 @@
+/*
+**
+** Account
+*****************************************************************/
+.account__container {
+  border-bottom: solid 1px #ddd;
+  padding-bottom: 0;
+}
+
+.account__content {
+  padding: 0 0 3em 1.5em;
+}
+
+.account__form {
+  padding-top: 1em;
+}
+
+.account__button {
+  background: black;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  font-size: 115%;
+  padding: 0.75em 1.5em;
+}
+
+a.account__button {
+  background: black;
+  color: white;
+  text-decoration: none;
+}
+
+.account__button--disabled,
+button.account__button--disabled {
+  cursor: default;
+  opacity: 0.1;
+}
+
+.account__button--disabled:hover,
+button.account__button--disabled:hover {
+  text-decoration: none;
+}
+
+/*
+**
+** Account group
+*****************************************************************/
+.account__group {
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+  padding: 0;
+}
+
+.account__groupTitle {
+  border-bottom: solid 1px #ddd;
+  font-size: 170%;
+  font-weight: bold;
+  margin-bottom: 0.75em;
+  padding: 0 0 0.25em;
+  width: 100%;
+}
+
+/*
+**
+** Account item
+*****************************************************************/
+.account__item {
+  display: flex;
+  margin-bottom: 1.25em;
+  width: 100%;
+}
+
+.account__itemContent {
+  flex: 1;
+  position: relative;
+}
+
+.account__label {
+  display: block;
+  font-size: 100%;
+  margin-bottom: 0.375em;
+}
+
+.account__required {
+  color: #db0000;
+  font-size: 125%;
+}
+
+.account__textbox {
+  width: 100%;
+}
+
+.account__itemNote {
+  background: #eee;
+  display: block;
+  font-size: 80%;
+  padding: 1em;
+}
+
+.account__itemContent--phone,
+.account__itemContent--postalCode {
+  max-width: 25%;
+  min-width: 25%;
+}
+
+.account__itemContent--firstName,
+.account__itemContent--lastName,
+.account__itemContent--city,
+.account__itemContent--state,
+.account__itemContent--country,
+.account__itemContent--email,
+.account__itemContent--password {
+  max-width: 50%;
+  min-width: 50%;
+}
+
+.account__itemContent--street {
+  max-width: 75%;
+  min-width: 75%;
+}
+
+/*
+**
+** Account item
+*****************************************************************/
+.account__validation {
+  display: block;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  top: 2em;
+  transform: translateX(calc(100% + 1em));
+}
+
+.account__validationIcon {
+  fill: currentColor;
+  width: 2em;
+}
+
+.account__validationMessage {
+  display: block;
+  line-height: 1;
+}
+
+/* Error */
+.account__validation--invalid,
+.account__validation--mismatch {
+  display: none;
+  color: #db0000;
+}
+
+.account__item--invalid .account__validation--invalid,
+.account__item--mismatch .account__validation--mismatch {
+  display: block;
+}
+
+.account__item--invalid .account__textbox,
+.account__item--mismatch .account__textbox {
+  border-color: #db0000;
+}
+
+.account__item--mismatch .account__itemNote {
+  color: #db0000;
+  background: rgba(255, 0, 0, 0.1);
+}
+
+/* Valid */
+.account__validation--valid {
+  display: none;
+  color: green;
+}
+
+.account__item--valid .account__validation--valid {
+  display: block;
+}
+
+.account__validation--valid .account__validationMessage {
+  padding-left: 0.25em;
+}
+
+/*
+**
+** Custom listbox
+*****************************************************************/
+#exp_button {
+  background: transparent;
+  border: solid 1px #ccc;
+  color: inherit;
+  display: block;
+  min-height: 2.125em;
+  padding: 0.25em 0;
+  text-indent: 0.5em;
+  width: 100%;
+}
+
+.account__item--invalid #exp_button {
+  border-color: #db0000;
+}
+
+#exp_button::after,
+#exp_button[aria-expanded="true"]::after {
+  border-left-width: 0.5em;
+  border-right-width: 0.5em;
+  border-top-width: 0.5em;
+  right: 0.375em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#exp_button::after {
+  border-top-color: currentColor;
+}
+
+#exp_button[aria-expanded="true"]::after {
+  border-bottom-color: currentColor;
+}
+
+#exp_elem_list {
+  width: 100%;
+}
+
+[role="option"] {
+  align-items: center;
+  display: flex;
+  min-height: 1.75em;
+  padding: 0 0.5em;
+}
+
+[role="option"][aria-selected="true"]::before {
+  content: "";
+  position: static;
+}
+
+/* Flag icons */
+[role="option"]::before {
+  background: url(../images/country-flags.png) no-repeat;
+  content: "";
+  display: inline-block;
+  height: 1rem;
+  margin-right: 0.5em;
+  width: 1rem;
+}
+
+#exp_elem_empty::before {
+  background: none;
+  content: "--";
+  height: auto;
+  opacity: 0.5;
+  text-align: center;
+}
+
+#exp_elem_empty::after {
+  content: "Please choose a country";
+  font-style: italic;
+  opacity: 0.5;
+}
+
+#exp_elem_au::before {
+  background-position: 0 -544px;
+}
+
+#exp_elem_br::before {
+  background-position: 0 -800px;
+}
+
+#exp_elem_ca::before {
+  background-position: 0 -896px;
+}
+
+#exp_elem_cl::before {
+  background-position: 0 -1008px;
+}
+
+#exp_elem_cn::before {
+  background-position: 0 -1040px;
+}
+
+#exp_elem_cr::before {
+  background-position: 0 -1072px;
+}
+
+#exp_elem_de::before {
+  background-position: 0 -1152px;
+}
+
+#exp_elem_dk::before {
+  background-position: 0 -1184px;
+}
+
+#exp_elem_do::before {
+  background-position: 0 -1216px;
+}
+
+#exp_elem_es::before {
+  background-position: 0 -1328px;
+}
+
+#exp_elem_fi::before {
+  background-position: 0 -1360px;
+}
+
+#exp_elem_fj::before {
+  background-position: 0 -1376px;
+}
+
+#exp_elem_fr::before {
+  background-position: 0 -1424px;
+}
+
+#exp_elem_gb::before {
+  background-position: 0 -1456px;
+}
+
+#exp_elem_gl::before {
+  background-position: 0 -1552px;
+}
+
+#exp_elem_gr::before {
+  background-position: 0 -1632px;
+}
+
+#exp_elem_hk::before {
+  background-position: 0 -1712px;
+}
+
+#exp_elem_hu::before {
+  background-position: 0 -1776px;
+}
+
+#exp_elem_id::before {
+  background-position: 0 -1792px;
+}
+
+#exp_elem_ie::before {
+  background-position: 0 -1808px;
+}
+
+#exp_elem_il::before {
+  background-position: 0 -1824px;
+}
+
+#exp_elem_in::before {
+  background-position: 0 -1856px;
+}
+
+#exp_elem_iq::before {
+  background-position: 0 -1872px;
+}
+
+#exp_elem_is::before {
+  background-position: 0 -1904px;
+}
+
+#exp_elem_it::before {
+  background-position: 0 -1920px;
+}
+
+#exp_elem_jm::before {
+  background-position: 0 -1952px;
+}
+
+#exp_elem_jp::before {
+  background-position: 0 -1984px;
+}
+
+#exp_elem_ke::before {
+  background-position: 0 -2000px;
+}
+
+#exp_elem_kp::before {
+  background-position: 0 -2096px;
+}
+
+#exp_elem_kr::before {
+  background-position: 0 -2112px;
+}
+
+#exp_elem_mg::before {
+  background-position: 0 -2400px;
+}
+
+#exp_elem_mx::before {
+  background-position: 0 -2624px;
+}
+
+#exp_elem_my::before {
+  background-position: 0 -2640px;
+}
+
+#exp_elem_ng::before {
+  background-position: 0 -2720px;
+}
+
+#exp_elem_nl::before {
+  background-position: 0 -2752px;
+}
+
+#exp_elem_no::before {
+  background-position: 0 -2768px;
+}
+
+#exp_elem_nz::before {
+  background-position: 0 -2816px;
+}
+
+#exp_elem_ph::before {
+  background-position: 0 -2912px;
+}
+
+#exp_elem_pl::before {
+  background-position: 0 -2944px;
+}
+
+#exp_elem_se::before {
+  background-position: 0 -3200px;
+}
+
+#exp_elem_th::before {
+  background-position: 0 -3456px;
+}
+
+#exp_elem_tw::before {
+  background-position: 0 -3600px;
+}
+
+#exp_elem_ua::before {
+  background-position: 0 -3632px;
+}
+
+#exp_elem_us::before {
+  background-position: 0 -3664px;
+}
+
+#exp_elem_ve::before {
+  background-position: 0 -3744px;
+}
+
+#exp_elem_za::before {
+  background-position: 0 -3856px;
+}

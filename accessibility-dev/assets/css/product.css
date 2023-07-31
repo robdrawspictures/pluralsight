@@ -1,0 +1,433 @@
+/*
+**
+** Product metadata
+****************************************************************/
+.product__metadata {
+  margin-top: -1em;
+}
+
+.product__metadataList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.product__metadataItem:not(:first-child) {
+  border-left: solid 1px #bbb;
+  padding-left: 0.75em;
+}
+
+.product__metadataItem:not(:last-child) {
+  padding-right: 0.75em;
+}
+
+.product__metadataItem:nth-child(2) {
+  color: var(--pageLinkColor);
+  display: flex;
+}
+
+.product__metadataIcon {
+  align-self: baseline;
+  fill: currentColor;
+  height: 1em;
+  margin-right: 0.5em;
+  transform: translateY(0.125em);
+  width: 1em;
+}
+
+/*
+**
+** Product metadata
+****************************************************************/
+.product__main {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em 0;
+}
+
+/*
+**
+** Product images
+****************************************************************/
+.product__thumbnails {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 10%;
+  min-width: 10%;
+}
+
+.product__thumbnailImage {
+  padding: 0;
+  position: relative;
+}
+
+.product__thumbnailImage::before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.product__thumbnailImage--current::before {
+  border: solid 0.125em rgba(0, 0, 0, 0.4);
+}
+
+.product__thumbnailImage--current:focus::before {
+  display: none;
+}
+
+.product__thumbnailImage:not(.product__thumbnailImage--current):hover::before {
+  border: solid 0.125em rgba(0, 0, 0, 0.15);
+}
+
+.product__image,
+.product__configuration {
+  max-width: calc(45% - 1em);
+  min-width: calc(45% - 1em);
+}
+
+.product__image {
+  border: solid 1px #ddd;
+}
+
+/*
+**
+** Profuct configuration
+****************************************************************/
+.product__configuration {
+  padding-left: 1.5em;
+}
+
+.product__configurationSubTitle {
+  font-size: 100%;
+  margin: 1.25em 0 0.5em;
+}
+
+.product__price {
+  font-size: 200%;
+  margin: 0 0 0.25em;
+}
+
+.product__priceOriginal {
+  opacity: 0.4;
+  padding-left: 0.5em;
+  text-decoration: line-through;
+}
+
+.product__savings {
+  font-size: 80%;
+  margin-bottom: 2em;
+}
+
+.product__coupon {
+  background: #eee;
+  margin-bottom: 1.25em;
+  padding: 1em;
+  text-align: center;
+}
+
+.product__couponTitle {
+  display: block;
+}
+
+.product__description {
+  border-bottom: solid 1px #ddd;
+  padding-bottom: 1em;
+}
+
+/*
+**
+** Profuct colors
+****************************************************************/
+.product__colors {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.product__colorSwatch {
+  background: none;
+  border: solid 2px transparent;
+  color: black;
+  height: 2em;
+  padding: 0;
+  position: relative;
+  width: 2em;
+}
+
+.product__colorSwatch:not(.product__colorSwatch--current):hover {
+  border: solid 0.125em rgba(0, 0, 0, 0.15);
+}
+
+.product__colorSwatch--current {
+  border: solid 0.125em rgba(0, 0, 0, 0.4);
+}
+
+.product__colorSwatch--current:focus {
+  border: none;
+}
+
+.product__colorSwatch::before {
+  bottom: 0.25em;
+  content: "";
+  left: 0.25em;
+  position: absolute;
+  right: 0.25em;
+  top: 0.25em;
+}
+
+.product__colorSwatch--lightOrange::before {
+  background: orange;
+}
+
+.product__colorSwatch--burntOrange::before {
+  background: orangered;
+}
+
+.product__colorSwatch--brown::before {
+  background: brown;
+}
+
+.product__colorSwatch--forrest::before {
+  background: forestgreen;
+}
+
+.product__colorSwatch--lime::before {
+  background: limegreen;
+}
+
+.product__colorSwatch--black::before {
+  background: black;
+}
+
+.product__colorSwatch--blue::before {
+  background: blue;
+}
+
+.product__colorSwatch--aqua::before {
+  background: aqua;
+}
+
+/*
+**
+** Profuct utilities
+****************************************************************/
+.product__utilities {
+  display: flex;
+  list-style: none;
+  margin: 0.75em 0 0;
+  padding: 0;
+}
+
+.product__utility {
+  margin-right: 0.5em;
+}
+
+.product__utilityButton {
+  background: none;
+  border: solid 1px #ddd;
+  color: inherit;
+  line-height: 2;
+  text-align: center;
+}
+
+.product__utilityButton--smallMedium::before {
+  content: "S/M";
+}
+
+.product__utilityButton--mediumLarge::before {
+  content: "M/L";
+}
+
+.product__utilityButton--add::before {
+  content: "+";
+}
+
+.product__utilityButton--remove::before {
+  content: "-";
+}
+
+.product__utilityButton--total {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.product__utilityCartButton {
+  border: solid 1px black;
+  line-height: 2;
+}
+
+/*
+**
+** Featured products
+*****************************************************************/
+.product__featuredProducts {
+  margin-left: -1em;
+  margin-right: -1em;
+  padding-bottom: 1em;
+}
+
+.product__featuredProductsTitle {
+  font-size: 225%;
+  margin: 0.75em 0 0.375em;
+  padding-left: 1rem;
+}
+
+.product__featuredProductsList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.product__featuredProductsItem {
+  padding: 1em;
+  width: 25%;
+}
+
+.product__featuredProductsLink {
+  color: black;
+  display: block;
+  text-decoration: none;
+}
+
+/* Rating */
+.product__featuredProductsRating {
+  display: flex;
+  margin: 0.5em 0;
+}
+
+.product__featuredProductsIcon {
+  fill: var(--pageLinkColor);
+  margin-right: 0.125em;
+  width: 1em;
+}
+
+.product__featuredProductsRatingCount {
+  color: #666;
+  margin-left: 0.375em;
+}
+
+.product__featuredProductsName {
+  display: block;
+}
+
+.product__featuredProductsPrice {
+  font-style: normal;
+}
+
+/*
+**
+** Profuct details
+****************************************************************/
+.product__details {
+  border-top: solid 1px #ddd;
+  padding: 0.5em 0 0;
+}
+
+.product__detailsDescription {
+  width: 75%;
+}
+
+.product__detailsLists {
+  border-bottom: solid 1px #ddd;
+  border-top: solid 1px #ddd;
+  display: flex;
+  margin-top: 2em;
+}
+
+.product__detailsList {
+  padding-bottom: 1.5em;
+  width: 50%;
+}
+
+.product__detailsList:first-child {
+  border-right: solid 1px #ddd;
+}
+
+.product__detailsList:last-child {
+  padding-left: 1.5em;
+}
+
+h3.product__detailsHeader {
+  margin-top: 1.5em;
+}
+
+h4.product__detailsSubheader {
+  margin-top: 1.5em;
+}
+
+/* Key, value list */
+.product__detailsKeyValueList {
+  margin: 0.5em 0 1em;
+}
+
+.product__detailsKeyValueItem {
+  padding-left: 1.25em;
+  position: relative;
+}
+
+.product__detailsKeyValueItem::before {
+  background: currentColor;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 0.3125em;
+  left: 0.125em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.3125em;
+}
+
+.product__detailsKey,
+.product__detailsValue {
+  display: inline;
+}
+
+/* Unordered list */
+.product__detailsUnorderedList {
+  margin: 0.5em 0 1em;
+  padding: 0 0 0 1.25em;
+}
+
+/*
+**
+** Profuct infographic
+****************************************************************/
+.product__infographic {
+  margin: 1.5em 1.5em 0 0;
+}
+
+.product__infographicContainer {
+  border: solid 1px #ddd;
+}
+
+.product__infographicCaption {
+  background: #eee;
+  padding: 1.5em 1em 1em;
+  /* text-align: center; */
+}
+
+h2.product__infographicTitle {
+  font-size: 170%;
+  margin: 0 0 0.5em;
+}
+
+.product__infographicFeature {
+  font-weight: bold;
+}
+
+.product__infographicDescription:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.product__infographicLink {
+  color: var(--pageLinkColor);
+}

@@ -1,0 +1,21 @@
+$base-color:  greenyellow
+
+=centerer($horizontal: true, $vertical: true)
+    position: aboslute
+    @if ($horizontal and $vertical)
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    @else if ($horizontal)
+        left: 50%
+        transform: translate(-50%, 0)
+    @else if ($vertical)
+        top: 50%
+        transform: translate(0, -50%)
+
+.parent
+    position: relative
+    background: $base-color
+    width: 50%
+    height: 200px
+    margin: 20px auto

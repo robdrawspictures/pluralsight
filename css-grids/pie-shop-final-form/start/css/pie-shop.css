@@ -1,0 +1,108 @@
+* {
+    font-family: Helvetica, "Helvetica-Neue", Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+}
+
+body {
+    background-color: #e6e4d9;
+    background-image: url(../../../start/img/jjbapattern.png);
+}
+
+nav, main {
+    background: white;
+    padding: 1em;
+    border: 2px solid #aa69ce;
+    border-bottom: 5px solid #aa69ce;
+    border-radius: 0.5em;
+}
+
+header {
+    background: #aa69ce;
+    height: 80px;
+    text-align: end;
+    padding: 10px;
+    font-size: 32px;
+    font-style: italic;
+    color: aliceblue;
+    font-family: cursive;
+}
+
+aside {
+    text-align: center;
+}
+
+aside img {
+    max-width: 100%;
+    padding: 0 1em;
+}
+
+aside p {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    line-height: 1.5em;
+    padding: 0;
+}
+
+main h1 {
+    font-family: 'Patua One', cursive;
+    margin-top: 0.25em;
+    background-color: rgba(187, 120, 198, 0.5);
+    padding: 5px;
+    width: max-content;
+    border-radius: 5px;
+}
+
+main img {
+    max-width: 100%;
+    border: 3px #aa69ce solid;
+    border-radius: 5px;
+}
+
+.cta {
+    display: block;
+    color: white;
+    margin: 1.5em auto;
+    font-family: 'Patua One', cursive;
+    font-weight: bold;
+    width: 15em;
+    border-radius: 2em;
+    border-bottom: 4px solid black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 0.75em;
+    background: #aa69ce;
+}
+
+body img {
+    object-fit: cover;
+    max-width: 100%;
+}
+
+footer {
+    text-align: center;
+}
+
+a:active, :focus {
+    outline: 2px solid purple;
+    color: white;
+    background: purple;
+}
+
+.pies {
+    background: #aa69ce;
+    border-radius: 0.5em;
+    padding: 0.5em;
+}
+
+.pies img {
+    border-radius: 0.25em;
+    border: 2px white solid;
+}

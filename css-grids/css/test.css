@@ -1,0 +1,318 @@
+html, body {
+    height:100%;
+}
+
+body {
+    background-color: black;
+    color: red;
+}
+
+div {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.container-1 {
+    display: grid;
+    grid-template-columns: 15em auto 15em;
+}
+
+.container-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.container-3 {
+    display: grid;
+    grid-template-columns: repeat(2, 20em);
+}
+
+.container-4 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr 2fr 1fr);
+}
+
+.container-5 {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+.container-6 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 30em);
+}
+
+.container-7 {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+}
+
+/* ^^^Will evenly expand cell widths until there is sufficient space
+to add a another 20em cell; will shrink cells equally until they hit
+20em at which point a line break occurs. */
+
+.container-8 {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+}
+
+.container-9 {
+    display: grid;
+    gap: 2em;
+    grid: 1fr 2fr 4fr / repeat(3, 10em);
+}
+
+.container-10 {
+    display: grid;
+    column-gap: 1em;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(2, 10em);
+}
+
+.container-11 {
+    display: grid;
+    row-gap: 1em;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(2, 10em);
+}
+
+.container-12 {
+    display: grid;
+    gap: 1em 2em;
+    grid: 10em 10em / 10em 10em;
+}
+
+.container-13 {
+    display: grid;
+    gap: 1em;
+    grid: 10em 10em / 10em 10em;
+    grid-auto-rows: 10em;
+}
+
+.container-14 {
+    display: grid;
+    gap: 1em;
+    grid: 10em 10em / 10em 10em;
+    grid-auto-rows: 2em 5em;
+    grid-auto-flow: column;
+}
+
+.container-15 {
+    display: grid;
+    gap: 1em;
+    grid: 10em 10em / 10em 10em;
+    grid-auto-rows: 2em 5em;
+    grid-auto-flow: column;
+    grid-auto-columns: 2em;
+}
+
+.container-16 {
+    display: grid;
+    gap: 1em;
+    grid: 10em 10em / auto-flow 10em;
+}
+
+.container-17 {
+    display: grid;
+    gap: 1em;
+    grid: auto-flow 10em / 10em 10em;
+}
+
+.container-18 {
+    display: grid;
+    gap: 1em;
+    grid: auto-flow 10em / repeat(12, 1fr);
+}
+
+.container-18 div {
+    grid-column: span 2;
+}
+
+#cell-1 {
+    grid-column: span 4;
+    background-color: olive;
+}
+
+.container-19 {
+    display: grid;
+    grid: auto-flow 5em / repeat(4, 1fr);
+}
+
+#cell-4 {
+    grid-column: span 3;
+    background-color: olive;
+}
+
+.container-20 {
+    display: grid;
+    grid: auto-flow 5em / repeat(4, 1fr);
+    grid-auto-flow: dense;
+}
+
+.container-21 {
+    display: grid;
+    grid: auto-flow minmax(min-content, 6em) / repeat(5, 10em);
+}
+
+#cell-21-4 {
+    grid-row: 1 / 2;
+    grid-column: 2 / span 3;
+}
+
+#cell-21-5 {
+    grid-row: 1 / 3;
+    grid-column: 3/4;
+    background-color: aquamarine;
+}
+
+.container-22 {
+    display: grid;
+    grid: auto-flow minmax(min-content, 6em) / repeat(5, 10em);
+}
+
+#cell-22-4 {
+    grid-row: 1 / 2;
+    grid-column: 2 / span 3;
+    z-index: 1;
+    background-color: black;
+}
+
+#cell-22-5 {
+    grid-row: 1 / 3;
+    grid-column: 3/4;
+    background-color: aquamarine;
+}
+
+.container-23 {
+    display: grid;
+    grid-template-columns: [left-edge] 1fr 1fr [midpoint halfway] 1fr 1fr [right-edge];
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+/* NOTE: You can give an area multipe names by including them all in
+the same square brackets, separated by a space. */
+
+#cell-23-1, #cell-23-4 {
+    grid-column: left-edge / right-edge;
+}
+
+#cell-23-2, #cell-23-3 {
+    grid-row: span 2;
+}
+
+#cell-23-2 {
+    grid-column: left-edge / midpoint;
+}
+
+#cell-23-3 {
+    grid-column: halfway / right-edge;
+}
+
+.container-24 {
+    display:grid;
+    grid-template-columns: [left-edge] repeat(auto-fill, [block-start] 10em 3em [block-end]) [right-edge];
+}
+
+#cell-24-1 {
+    grid-column: block-start 4 / block-end 4;
+}
+
+#cell-24-2 {
+    grid-column: block-start 2 / block-end 3;
+}
+
+#cell-24-3 {
+    grid-column: block-start 1 / block-end 3;
+}
+
+#cell-24-4 {
+    grid-column: block-start 3 / block-end 4;
+}
+
+#cell-24-5 {
+    grid-column: block-start 4 / block-end 5;
+}
+
+#cell-24-6 {
+    grid-column: block-start 3 / block-end 5;
+}
+
+#cell-24-7 {
+    grid-column: block-start 2 / block-end 5;
+}
+
+#cell-24-8 {
+    grid-column: block-start 2 / block-end 4;
+}
+
+#cell-24-9 {
+    grid-column: block-start 1 / block-end 5;
+}
+
+.container-25 {
+    display: grid;
+    grid-template-areas: "header header header"
+                         "l-col  mid-col  r-col"
+                         "footer footer footer";
+    grid-template-rows: min-content auto min-content;
+    grid-template-columns: 15em 1fr 1fr;
+}
+
+#header { grid-area: header; }
+#left { grid-area: l-col; }
+#middle { grid-area: mid-col; }
+#right { grid-area: r-col; }
+#footer { grid-area: footer; }
+
+.container-26 {
+    display: grid;
+    grid-template-areas: "smol ... ..."
+                         "midi midi ..."
+                         "chungus chungus chungus";
+    grid-template-rows: min-content auto min-content;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#little {grid-area: smol;}
+#medium {grid-area: midi;}
+#large {grid-area: chungus;}
+
+.container-27 {
+    display: grid;
+    grid: "h    h   h  " min-content
+          "l-c  m-c r-c" auto
+          "f    f   f  " min-content /
+          1fr 50% 1fr;
+}
+
+#h-27 { grid-area: h; }
+#l-27 { grid-area: l-c; }
+#m-27 { grid-area: m-c; background-color: aqua;}
+#r-27 { grid-area: r-c; }
+#f-27 { grid-area: f; }
+
+#h-27, #f-27 {
+    background-color: orchid;
+}
+
+#l-27, #r-27 {
+    background-color: goldenrod;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.grid-item {
+    border: solid greenyellow 3px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}

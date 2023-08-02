@@ -1,0 +1,30 @@
+header {
+    background-color: #9b87b8;
+}
+
+header img {
+    float: left;
+    height: 85px;
+    padding-right: 10px;
+}
+
+header h1, header h2 {
+    margin: 0;
+    color: white;
+    font-weight: 300;
+    font-style: italic;
+}
+
+header h1 {
+    padding: .5rem 0 0 0;
+    font-size: 2.95rem;
+}
+
+header h2 {
+    padding: .2rem 0 0 0;
+    font-size: 1.05rem;
+}
+
+footer {
+    background-color: #9b87b8;
+}

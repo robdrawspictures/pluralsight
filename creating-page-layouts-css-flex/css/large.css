@@ -1,0 +1,11 @@
+@media only screen and (min-width: 1024px) {
+
+    nav ul {margin-left: 2vw;}
+    nav li {width: auto;}
+    nav a {padding: .7rem 1rem;}
+
+    h1{color:green;}
+
+    .large-3 {flex-basis: 25%;}
+
+} /* END MEDIA QUERY */
